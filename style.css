@@ -254,9 +254,13 @@ body {
         flex-direction: column;
         align-items: center;
     }
-
+    
+    .foto_lp {
+        margin-bottom: 3rem;
+    }
+    
     .landing_page p {
-        margin-bottom: 7rem;
+        margin-bottom: 10rem;
     }
 
     .links {
