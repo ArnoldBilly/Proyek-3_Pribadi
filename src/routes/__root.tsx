@@ -1,4 +1,5 @@
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router'
+import { Nav } from '@/components/ui/Nav'
 
 export const Route = createRootRoute({
     component: RootLayout,
@@ -13,12 +14,7 @@ export const Route = createRootRoute({
 function RootLayout() {
     return (
         <>
-        <nav className="flex gap-4 border-b-3 border-ink p-4 font-bold">
-            <Link to="/">Home</Link>
-            <Link to="/projects/$id" params={{id: 'demo'}}>
-                proyek demo
-            </Link>
-        </nav>
+        <Nav />
         <Outlet />
         </>
     )

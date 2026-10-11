@@ -1,3 +1,7 @@
+import { Expertise } from "@/components/ui/Expertise"
+import { Hero } from "@/components/ui/Hero"
+import { Marquee } from "@/components/ui/Marquee"
+import { TechStack } from "@/components/ui/TechStack"
 import { createFileRoute } from "@tanstack/react-router"
 
 export const Route = createFileRoute('/')({
@@ -6,11 +10,11 @@ export const Route = createFileRoute('/')({
 
 function Home() {
     return(
-        <main className="p-10">
-            <h1 className="font-display text-7xl uppercase">Halo Dunia</h1>
-            <div className="mt-8 inline-block border-3 border-ink bg-white p-6 shadow-brutal">
-                <p className="text-sm">Halaman Utama</p>
-            </div>
+        <main>
+            <Hero />
+            <Marquee />
+            <Expertise />
+            <TechStack />
         </main>
     )
 }
