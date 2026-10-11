@@ -6,7 +6,7 @@ const menu = ['HOME', 'EXPERTISE', 'WORK', 'EXPERIENCE', 'CONTACT'] as const
 export function Nav() {
   return (
     <header className="sticky top-0 z-50 px-4 pt-4">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between border-3 border-ink bg-white px-5 py-3 shadow-brutal">
+      <nav className="bleed mx-auto flex max-w-6xl items-center justify-between border-3 border-ink bg-white px-5 py-3 shadow-brutal">
         <Link to="/" className="font-bold">
           {profile.firstName}
         </Link>

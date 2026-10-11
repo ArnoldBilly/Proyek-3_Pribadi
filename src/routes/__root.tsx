@@ -1,5 +1,6 @@
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router'
 import { Nav } from '@/components/ui/Nav'
+import { Background } from '@/components/ui/Background'
 
 export const Route = createRootRoute({
     component: RootLayout,
@@ -14,6 +15,7 @@ export const Route = createRootRoute({
 function RootLayout() {
     return (
         <>
+        <Background />
         <Nav />
         <Outlet />
         </>

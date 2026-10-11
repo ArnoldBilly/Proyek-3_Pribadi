@@ -150,4 +150,7 @@
   .btn-brutal:hover {
     @apply translate-x-[3px] translate-y-[3px] shadow-brutal-sm;
   }
+  .bleed {
+    @apply xl:-mx-10;
+  }
 }

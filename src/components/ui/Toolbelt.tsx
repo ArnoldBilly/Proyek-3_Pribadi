@@ -1,0 +1,46 @@
+import { tools } from "@/data/tools";
+
+export function Toolbelt() {
+    return (
+        <section id="STACK" className="mx-auto max-w-6xl px-4 py-4">
+            <header className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                <div>
+                <p className="text-xs uppercase tracking-[0.4em]">Toolbelt</p>
+                <h2 className="mt-3 font-display text-5xl uppercase leading-none sm:text-6xl">
+                    Tools I build{' '}
+                    <span className="underline decoration-brand decoration-8 underline-offset-4">
+                    with
+                    </span>
+                </h2>
+                </div>
+                <p className="max-w-xs text-sm leading-relaxed">
+                Bahasa, framework, dan alur kerja yang saya andalkan dari desain
+                sampai deployment.
+                </p>
+            </header>
+
+            <div className="relative overflow-hidden border-3 border-ink bg-white py-8 shadow-brutal motion-reduce:overflow-x-auto">
+                <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent" />
+
+                <div className="flex w-max animate-marquee [animation-duration:20s] motion-reduce:animate-none hover:[animation-play-state:paused]">
+                {[0, 1].map((copy) => (
+                    <ul key={copy} aria-hidden={copy > 0} className="flex shrink-0">
+                    {tools.map(({ name, icon: Icon, color }) => (
+                        <li
+                        key={name}
+                        className="flex shrink-0 flex-col items-center gap-3 px-4"
+                        >
+                        <span className="grid size-20 place-items-center border-3 border-ink bg-white shadow-brutal-sm transition hover:-translate-y-1">
+                            <Icon size={36} color={color} aria-hidden />
+                        </span>
+                        <span className="text-xs">{name}</span>
+                        </li>
+                    ))}
+                    </ul>
+                ))}
+                </div>
+            </div>
+        </section>
+    )
+}
