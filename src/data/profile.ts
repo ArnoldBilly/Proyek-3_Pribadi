@@ -9,5 +9,16 @@ export const profile = {
     links: {
         github: 'https://github.com/ArnoldBilly/',
         linkedIn: 'https://www.linkedin.com/in/arnold-billy-kresnawan/'
-    }
+    },
+    photo: '',
+    about: {
+        label: 'The Story',
+        headline: ['Judul', 'baris', 'besar'],
+        body: 'Satu paragraf singkat tentang siapa kamu dan cara kamu bekerja.',
+    },
+    mission: {
+        label: 'The Mission',
+        headline: 'Misimu',
+        body: 'Satu atau dua kalimat tentang apa yang ingin kamu capai lewat karya.',
+    },
 }

@@ -23,7 +23,7 @@ export function Toolbelt() {
                 <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent" />
                 <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent" />
 
-                <div className="flex w-max animate-marquee [animation-duration:20s] motion-reduce:animate-none hover:[animation-play-state:paused]">
+                <div className="flex w-max animate-marquee [animation-duration:35s] motion-reduce:animate-none hover:[animation-play-state:paused]">
                 {[0, 1].map((copy) => (
                     <ul key={copy} aria-hidden={copy > 0} className="flex shrink-0">
                     {tools.map(({ name, icon: Icon, color }) => (

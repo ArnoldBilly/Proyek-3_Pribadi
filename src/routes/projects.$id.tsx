@@ -11,7 +11,7 @@ export const Route = createFileRoute('/projects/$id')({
   notFoundComponent: () => (
     <main className="mx-auto max-w-3xl px-4 py-20">
       <h1 className="font-display text-6xl uppercase">Proyek tidak ditemukan</h1>
-      <Link to="/" hash="work" className="btn-brutal mt-8 bg-brand">
+      <Link to="/" hash="WORK" className="btn-brutal mt-8 bg-brand">
         ← Kembali ke proyek
       </Link>
     </main>
@@ -23,7 +23,7 @@ function ProjectDetail() {
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-16">
-      <Link to="/" hash="work" className="font-bold underline">
+      <Link to="/" hash="WORK" className="font-bold underline">
         ← semua proyek
       </Link>
 
