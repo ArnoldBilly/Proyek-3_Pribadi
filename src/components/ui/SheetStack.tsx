@@ -12,7 +12,6 @@ export function SheetStack() {
   const sheetRefs = useRef<(HTMLDivElement | null)[]>([])
 
   useEffect(() => {
-    // Pengguna yang mengurangi gerakan: lembar tetap tegak
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
     let frame = 0
@@ -22,12 +21,11 @@ export function SheetStack() {
       const maxTilt = window.innerWidth < 768 ? 8 : 18
 
       sheets.forEach((_, i) => {
-        if (i === 0) return // lembar pertama adalah dasar, tidak miring
+        if (i === 0) return
         const slot = slotRefs.current[i]
         const sheet = sheetRefs.current[i]
         if (!slot || !sheet) return
 
-        // 1 = lembar baru muncul di dasar layar, 0 = sudah menempel di atas
         const t = Math.min(
           Math.max(slot.getBoundingClientRect().top / window.innerHeight, 0),
           1,
@@ -68,13 +66,11 @@ export function SheetStack() {
               }}
               className="relative h-full origin-top-left"
             >
-              {/* Kertas: jauh lebih lebar dari layar agar sudut miring tetap menutup penuh */}
               <div
                 aria-hidden
                 className={`absolute left-0 top-0 h-full w-[200vw] ${tone.bg} ${i > 0 ? 'border-t-3 border-ink' : ''}`}
               />
 
-              {/* Isi: lebar normal, di tengah */}
               <div
                 className={`relative mx-auto flex h-full max-w-6xl flex-col justify-center px-4 ${tone.text}`}
               >

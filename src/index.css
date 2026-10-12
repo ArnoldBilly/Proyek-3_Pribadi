@@ -115,10 +115,22 @@
   --font-display: "Anton", sans-serif;
   --font-mono: "Space Mono", ui-monospace, monospace;
   --animate-marquee: marquee 30s linear infinite;
+  --animate-role-in: role-in 0.4s ease-out;
 
   @keyframes marquee {
     to {
       transform: translateX(-50%);
+    }
+  }
+
+  @keyframes role-in {
+    from {
+      opacity: 0;
+      transform: translateY(70%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }

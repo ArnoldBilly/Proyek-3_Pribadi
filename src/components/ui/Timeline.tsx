@@ -5,7 +5,6 @@ export function Timeline({ items }: { items: TimelineItem[] }) {
         <ol className="space-y-8 border-l-3 border-ink pl-8">
         {items.map((item) => (
             <li key={`${item.title}-${item.period}`} className="relative">
-            {/* Titik di garis */}
             <span
                 aria-hidden
                 className="absolute -left-[42px] top-6 size-4 border-3 border-ink bg-brand"

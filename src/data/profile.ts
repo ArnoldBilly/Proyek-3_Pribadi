@@ -2,7 +2,7 @@ export const profile = {
     firstName: 'Arnold Billy',
     lastName: 'Kresnawan',
     initials: 'KN1',
-    role: 'Informatics Engineering Student, Aspiring DevOps/DevSecOps Engineer',
+    roles: [ 'Informatics Engineering Student', 'System Analyst Intern', 'Aspiring DevOps Engineer', 'Aspiring DevSecOps Engineer' ],
     year: 2026,
     quote: 'Ad Maiorem Dei Gloriam.',
     summary: 'Ngke diisi nya',

@@ -1,9 +1,10 @@
 import { CodeXml } from 'lucide-react'
 import { profile } from '@/data/profile'
+import { RotatingRole } from './RotatingRole'
 
 export function Hero() {
   return (
-    <section id="home" className="mx-auto max-w-6xl px-4 pb-24 pt-16">
+    <section id="HOME" className="mx-auto max-w-6xl px-4 pb-24 pt-16">
       <div className="bleed grid gap-14 lg:grid-cols-2 lg:items-center">
         {/* Kiri: identitas */}
         <div>
@@ -25,10 +26,8 @@ export function Hero() {
             </span>
           </h1>
 
-          <div className="mt-10 flex flex-wrap items-center gap-5">
-            <p className="border-3 border-ink bg-white px-4 py-2 text-sm uppercase tracking-[0.3em] shadow-brutal-sm">
-              {profile.role}
-            </p>
+          <div className="mt-10">
+            <RotatingRole />
           </div>
         </div>
 

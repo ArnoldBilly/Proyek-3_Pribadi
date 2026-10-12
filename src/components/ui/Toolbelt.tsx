@@ -28,13 +28,20 @@ export function Toolbelt() {
                     <ul key={copy} aria-hidden={copy > 0} className="flex shrink-0">
                     {tools.map(({ name, icon: Icon, color }) => (
                         <li
-                        key={name}
-                        className="flex shrink-0 flex-col items-center gap-3 px-4"
+                            key={name}
+                            className="group/item flex shrink-0 flex-col items-center gap-3 px-4"
                         >
-                        <span className="grid size-20 place-items-center border-3 border-ink bg-white shadow-brutal-sm transition hover:-translate-y-1">
-                            <Icon size={36} color={color} aria-hidden />
-                        </span>
-                        <span className="text-xs">{name}</span>
+                            <span className="grid size-20 place-items-center border-3 border-ink bg-white shadow-brutal-sm transition duration-200 hover:-translate-y-1 hover:shadow-brutal">
+                                <Icon
+                                size={36}
+                                color={color}
+                                aria-hidden
+                                className="transition-transform duration-200 hover:-rotate-12 hover:scale-125 hover:drop-shadow-[2px_2px_0_#0a0a0a]"
+                                />
+                            </span>
+                            <span className="text-xs transition group-hover/item:underline">
+                                {name}
+                            </span>
                         </li>
                     ))}
                     </ul>
