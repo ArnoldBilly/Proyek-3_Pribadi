@@ -7,7 +7,7 @@ export function Footer() {
         <p>
           © {new Date().getFullYear()} {profile.firstName} {profile.lastName}
         </p>
-        <p>Dibuat dengan React, Tailwind, dan Keinginan Untuk Berkembang Menjadi Pribadi Yang Lebih Baik.</p>
+        <p>Built with React, Tailwind, and a desire to grow into a better person.</p>
       </div>
     </footer>
   )

@@ -2,15 +2,16 @@ import { highlights } from '@/data/skills'
 
 const variants = [
   'bg-ink px-3 py-1 text-paper',
-  '',
-  'underline decoration-brand decoration-4 underline-offset-4'
+  'underline decoration-brand decoration-4 underline-offset-4',
+  'bg-brand px-2 py-1 text-ink',
+  ''
 ]
 
 export function Marquee() {
   return (
     <div className="overflow-hidden py-10">
       <div className="-rotate-1 border-y-3 border-ink bg-white py-4">
-        <div className="flex w-max animate-marquee motion-reduce:animate-none hover:[animation-play-state:paused]">
+        <div className="flex w-max animate-marquee [animation-duration:120s] motion-reduce:animate-none hover:[animation-play-state:paused]">
           {Array.from({ length: 4 }).map((_, copy) => (
             <ul
               key={copy}

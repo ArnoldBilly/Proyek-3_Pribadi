@@ -24,7 +24,7 @@ function ProjectDetail() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-16">
       <Link to="/" hash="WORK" className="font-bold underline">
-        ← semua proyek
+        ← KEMBALI
       </Link>
 
       <h1 className="mt-8 font-display text-5xl uppercase leading-none sm:text-7xl">

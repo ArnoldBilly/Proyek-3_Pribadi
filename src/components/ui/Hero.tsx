@@ -47,10 +47,10 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <a href="#work" className="btn-brutal bg-ink text-paper">
+            <a href="#WORK" className="btn-brutal bg-ink text-paper">
               View work
             </a>
-            <a href="#contact" className="btn-brutal bg-white">
+            <a href="#CONTACT" className="btn-brutal bg-white">
               Let's talk
             </a>
           </div>

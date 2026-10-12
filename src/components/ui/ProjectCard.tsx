@@ -12,7 +12,6 @@ export function ProjectCard({ project }: { project: Project }) {
         <img
           src={project.image}
           alt={`Tampilan proyek ${project.title}`}
-          loading="lazy"
           onError={(e) => {
             e.currentTarget.style.display = 'none'
           }}
