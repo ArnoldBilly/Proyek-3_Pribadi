@@ -7,24 +7,24 @@ import { profile } from '@/data/profile'
 import { SectionHeading } from './SectionHeading'
 import { Reveal } from './Reveal'
 
-const schema = z.object({
-  name: z.string().min(2, 'Nama minimal 2 karakter'),
-  email: z.string().email('Format email tidak valid'),
-  message: z
-    .string()
-    .min(10, 'Pesan minimal 10 karakter')
-    .max(1000, 'Pesan maksimal 1000 karakter'),
-  botField: z.string().optional(),
-})
+// const schema = z.object({
+//   name: z.string().min(2, 'Nama minimal 2 karakter'),
+//   email: z.string().email('Format email tidak valid'),
+//   message: z
+//     .string()
+//     .min(10, 'Pesan minimal 10 karakter')
+//     .max(1000, 'Pesan maksimal 1000 karakter'),
+//   botField: z.string().optional(),
+// })
 
-type FormValues = z.infer<typeof schema>
+// type FormValues = z.infer<typeof schema>
 type Status = 'idle' | 'success' | 'error'
 
 const field =
   'w-full border-3 border-ink bg-white px-3 py-2 text-sm shadow-brutal-sm focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-ink'
 
 export function Contact() {
-  const [status, setStatus] = useState<Status>('idle')
+  const [status] = useState<Status>('idle')
 //   const {
 //     register,
 //     handleSubmit,
@@ -32,7 +32,7 @@ export function Contact() {
 //     formState: { errors, isSubmitting },
 //   } = useForm<FormValues>({ resolver: zodResolver(schema) })
 
-  async function onSubmit(values: FormValues) {
+  // async function onSubmit(values: FormValues) {
     // setStatus('idle')
     // try {
     //   await sendMessage(values)
@@ -41,7 +41,7 @@ export function Contact() {
     // } catch {
     //   setStatus('error')
     // }
-  }
+  // }
 
   const links = [
     { label: 'github', href: profile.links.github },
