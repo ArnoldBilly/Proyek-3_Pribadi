@@ -20,7 +20,7 @@ export function Hero() {
           <h1 className="mt-8 font-display uppercase leading-[0.9]">
             <span className="block text-7xl sm:text-8xl lg:text-8xl">
               {profile.firstName}
-            </span>
+            </span>{' '}
             <span className="mt-2 inline-block -rotate-1 bg-brand px-4 text-7xl sm:text-8xl lg:text-9xl">
               {profile.lastName}
             </span>
